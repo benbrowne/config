@@ -5,14 +5,21 @@ alias gpuoh="git push -u origin HEAD"
 alias tsheets="git reflog --after '60 days ago' --format='%ad  %s' --date=format:%Y-%m-%d --author=ben | sort -r"
 
 # Provide user with a menu of git branches with a case-insensitive match to a string then checkout the selection.
-function greckout() {
-    branches=`git branch | grep -i $1`
-    branches=${branches//\*/}
-
+greckout() {
+    branches=$(git for-each-ref --format='%(refname:short)' refs/heads/ | grep -i $1)
     select branch in $branches;
     do
     git checkout $branch
     break
+    done
+}
+
+# Provide user with a menu of git branches for deletion.
+delete_branches() {
+    branches=$(git for-each-ref --format='%(refname:short)' refs/heads/)
+    select branch in $branches;
+    do
+    git branch -D $branch
     done
 }
 
