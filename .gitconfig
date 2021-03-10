@@ -1,0 +1,16 @@
+[user]
+	name = Ben Browne
+	email = ben.browne@kwhanalytics.com
+[alias]
+	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+    editor = vim
+[diff]
+    tool = vimdiff
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[difftool]
+    prompt = 0
+
+
