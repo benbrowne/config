@@ -28,3 +28,5 @@ delete_branches() {
     done
 }
 
+# Use VIM mode
+set -o vi
