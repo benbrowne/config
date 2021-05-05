@@ -9,7 +9,9 @@ set path=$PWD/**
 inoremap jk <Esc>
 set viminfo='100,<1000,s1000,h " Increase max size of registers
 
-imap <F4> <C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR>
+imap <F4> <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 nmap <F4> i<F4><Esc>
-imap <F5> <h1><F4></h1>
-nmap <F5> i<F5><Esc>
+imap <F5> # <F4><CR># <Esc>
+nmap <F5> i<F5>
+
+vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
