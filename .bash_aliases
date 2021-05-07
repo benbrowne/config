@@ -4,6 +4,7 @@ alias gcb="git checkout -b"
 alias gpuoh="git push -u origin HEAD"
 alias tsheets="git reflog --after '60 days ago' --format='%ad  %s' --date=format:%Y-%m-%d --author=ben | sort -r"
 alias vlog='vi -c "+normal Go" ~/Documents/log.md'
+alias ldate="TZ="US/Pacific" date '+%Y-%m-%d %H:%M:%S'"
 
 # Grep the insurance repo.
 insgrep() {
