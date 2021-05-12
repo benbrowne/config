@@ -15,3 +15,15 @@ imap <F5> # <F4><CR># <Esc>
 nmap <F5> i<F5>
 
 vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
+
+" vimplug. 
+" Installed with curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim.
+" Install packages with :PlugInstall
+call plug#begin()
+" linting
+Plug 'dense-analysis/ale'
+" autocompletion
+Plug 'Valloric/YouCompleteMe'
+" file system explorer
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+call plug#end()
