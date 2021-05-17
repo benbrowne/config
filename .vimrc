@@ -36,7 +36,8 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'junegunn/fzf'
 call plug#end()
 
-" let g:pydocstring_formatter = 'numpy'
+let g:pydocstring_formatter = 'numpy'
+let g:pydocstring_doq_path = "/usr/local/bin/doq"
 
 
 " ---------------------------------------
