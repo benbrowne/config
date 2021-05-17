@@ -1,9 +1,3 @@
-# Pull down configs
-git init
-git remote add origin https://github.com/benbrowne/config.git
-git fetch
-git reset --hard origin/master
-
 # Install vim 8.2 for COC compatibility
 add-apt-repository ppa:jonathonf/vim
 apt update
