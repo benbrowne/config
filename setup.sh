@@ -3,15 +3,14 @@ add-apt-repository ppa:jonathonf/vim
 apt update
 apt install vim 
 
-# Install vimplug
 echo 'installing vimplug'
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# Nodejs for COC-pyright
-echo 'installing COC-pyright'
+echo 'installing Nodejs for COC-pyright'
 curl -sL install-node.now.sh/lts | bash
-# COC-pyright
 echo 'installing vim plugins'
-vi -c ':PlugInstall'  -c ':CocInstall coc-pyright' 
+vi -c ':PlugInstall'  
+echo 'installing COC-pyright'
+vi -c ':CocInstall coc-pyright' 
+
 # python module doq is a dependency for vim-pydocstring
 pip install doq 
-
