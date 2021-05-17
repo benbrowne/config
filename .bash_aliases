@@ -11,6 +11,10 @@ insgrep() {
     grep -rinE $1 --exclude-dir marvin --include=*{py,sh,yaml,yml} ~/insurance
 }
 
+insed() {
+    grep -IrlE $1 --exclude-dir="marvin" --exclude-dir=".git" --include=*{py,sh,yaml,yml} ~/insurance | xargs sed -i "" "s/$1/$2/g"
+}
+
 # Provide user with a menu of git branches with a case-insensitive match to a string then checkout the selection.
 greckout() {
     branches=$(git for-each-ref --format='%(refname:short)' refs/heads/ | grep -i $1)
