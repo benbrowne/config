@@ -3,6 +3,10 @@ add-apt-repository ppa:jonathonf/vim
 apt update
 apt install vim 
 
+# Fuzzy finder
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 echo 'installing vimplug'
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo 'installing Nodejs for COC-pyright'
