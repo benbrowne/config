@@ -18,3 +18,5 @@ vi -c ':CocInstall coc-pyright'
 
 # python module doq is a dependency for vim-pydocstring
 pip install doq 
+
+soure .bash_aliases
