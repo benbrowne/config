@@ -10,9 +10,9 @@ inoremap jk <Esc>
 set viminfo='100,<1000,s1000,h " Increase max size of registers
 
 autocmd FileType markdown imap <buffer> <F4> <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
-autocmd FileType mdrkdown nmap <buffer> <F4> i<F4><Esc>
-autocmd FileType mdrkdown imap <buffer> <F5> # <F4><CR># <Esc>
-autocmd FileType mdrkdown nmap <buffer> <F5> i<F5>
+autocmd FileType markdown nmap <buffer> <F4> i<F4><Esc>
+autocmd FileType markdown imap <buffer> <F5> # <F4><CR># <Esc>
+autocmd FileType markdown nmap <buffer> <F5> i<F5>
 
 autocmd FileType python imap <buffer> <F4> import ipdb; ipdb.set_trace()<CR>
 autocmd FileType python nmap <buffer> <F4> i<F4>
