@@ -8,13 +8,9 @@ alias ldate="TZ="US/Pacific" date '+%Y-%m-%d %H:%M:%S'"
 alias gcm='git commit -m'
 alias gap='git add -p'
 
-# Grep the insurance repo.
-insgrep() {
-    grep -rinE $1 --exclude-dir marvin --include=*{py,sh,yaml,yml} ~/insurance
-}
-
-insed() {
-    grep -IrlE $1 --exclude-dir="marvin" --exclude-dir=".git" --include=*{py,sh,yaml,yml} ~/insurance | xargs sed -i "" "s/$1/$2/g"
+# Inline substitution within the current git repo.
+gitsed() {
+    sed -i "" s/$1/$2/g $(git grep -l $2)
 }
 
 # Provide user with a menu of git branches with a case-insensitive match to a string then checkout the selection.
@@ -36,5 +32,5 @@ delete_branches() {
     done
 }
 
-# Use VIM mode
+# Use VIM mode.
 set -o vi
