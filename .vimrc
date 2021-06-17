@@ -23,6 +23,9 @@ nnoremap <silent> <C-f> :Files<CR>
 " Capitalize line starts and add periods to line ends.
 vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
 
+" View the unsaved changes
+command Diff execute ":w !diff % -"
+
 " vimplug. 
 " Installed with curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim.
 " Install packages with :PlugInstall
