@@ -3,7 +3,7 @@ alias gb="git rev-parse --abbrev-ref HEAD"
 alias gcb="git checkout -b"
 alias gpuoh="git push -u origin HEAD"
 alias tsheets="git reflog --after '60 days ago' --format='%ad  %s' --date=format:%Y-%m-%d --author=ben | sort -r"
-alias vlog='vi +$ -O ~/Documents/log.md ~/Documents/todo.md'
+alias vlog='vi +$ -O ~/Dropbox/log.md ~/Dropbox/todo.md'
 alias ldate="TZ="US/Pacific" date '+%Y-%m-%d %H:%M:%S'"
 
 # Grep the insurance repo.
