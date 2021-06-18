@@ -14,7 +14,7 @@ curl -sL install-node.now.sh/lts | bash -s -- -f
 echo 'installing vim plugins'
 vi +'PlugInstall' +'qa'
 echo 'installing COC-pyright'
-vi +'CocInstall coc-pyright' +'qa'
+vi +'CocInstall coc-pyright'
 
 # python module doq is a dependency for vim-pydocstring
 pip install doq 
