@@ -6,6 +6,8 @@ set shiftwidth=4    " Indents will have a width of 4.
 set expandtab       " Expand TABs to spaces.
 set autoindent      " New line starts from previous indentation.
 set path=$PWD/**
+set background=dark
+colorscheme ron
 inoremap jk <Esc>
 set viminfo='100,<1000,s1000,h " Increase max size of registers
 
