@@ -44,3 +44,5 @@ delete_pricing_directories() {
 
 # Use VIM mode.
 set -o vi
+# Use jk to enter normal mode at the command line. 
+bind '"jk":vi-movement-mode'
