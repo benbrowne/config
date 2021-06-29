@@ -11,7 +11,7 @@ alias ldate="TZ="US/Pacific" date '+%Y-%m-%d %H:%M:%S'"
 
 # Inline substitution within the current git repo.
 gitsed() {
-    sed -i "" s/$1/$2/g $(git grep -l $2)
+    sed -i  s/$1/$2/g $(git grep -l $1)
 }
 
 # Provide user with a menu of git branches with a case-insensitive match to a string then checkout the selection.
