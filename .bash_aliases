@@ -5,6 +5,7 @@ alias gpuoh="git push -u origin HEAD"
 alias grh="git reset --hard"
 alias gcm='git commit -m'
 alias gap='git add -p'
+alias gsu='git submodule update'
 alias tsheets="git reflog --after '60 days ago' --format='%ad  %s' --date=format:%Y-%m-%d --author=ben | sort -r"
 alias vlog='vi +$ -O ~/Dropbox/log.md ~/Dropbox/todo.md'
 alias ldate="TZ="US/Pacific" date '+%Y-%m-%d %H:%M:%S'"
