@@ -33,7 +33,7 @@ command Diff execute ":w !diff % -"
 " Install packages with :PlugInstall
 call plug#begin()
 " linting
-"Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 " file system explorer
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Generate python docstrings. Dependency: 'pip install doq'
