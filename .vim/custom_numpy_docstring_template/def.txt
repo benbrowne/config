@@ -1,0 +1,14 @@
+"""
+
+Parameters
+----------
+{% for p in params -%}
+{{ p.argument }} :{% if p.annotation %} {{ p.annotation }}{% endif %}
+{% endfor %}
+{%- if return_type %}
+Returns
+-------
+{{ return_type }}
+
+{% endif -%}
+"""
