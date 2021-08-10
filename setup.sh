@@ -17,6 +17,9 @@ pip install ipdb
 
 source .bash_aliases
 
+# Use insurance as the working directory.
+cd insurance
+
 # Open a split-pane tmux session.
 tmux new-session -d
 tmux split-window -h 'vim'
