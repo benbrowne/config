@@ -12,4 +12,13 @@ apt install rename
 # python module doq is a dependency for vim-pydocstring
 pip install doq 
 
+# Prefer to pdb for debugging.
+pip install ipdb
+
 source .bash_aliases
+
+# Open a split-pane tmux session.
+tmux new-session -d
+tmux split-window -h 'vim'
+tmux -2 attach-session -d
+
