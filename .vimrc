@@ -19,9 +19,6 @@ autocmd FileType markdown nmap <buffer> <F5> i<F5>
 autocmd FileType python imap <buffer> <F4> import ipdb; ipdb.set_trace()<CR>
 autocmd FileType python nmap <buffer> <F4> i<F4>
 
-" Fuzzy finder mapping.
-nnoremap <silent> <C-f> :Files<CR>
-
 " Capitalize line starts and add periods to line ends.
 vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
 
