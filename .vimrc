@@ -37,6 +37,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'heavenshell/vim-pydocstring'
 " fuzzy finder
 Plug 'junegunn/fzf'
+" ag in vim
+Plug 'epmatsw/ag.vim'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"

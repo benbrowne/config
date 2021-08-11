@@ -8,6 +8,8 @@ echo 'installing vim plugins'
 vi +'PlugInstall' +'qa'
 echo 'installing rename'
 apt install rename
+echo 'installing ag'
+apt install silversearcher-ag
 
 # python module doq is a dependency for vim-pydocstring
 pip install doq 
