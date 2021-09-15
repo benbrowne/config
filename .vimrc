@@ -1,16 +1,20 @@
 set number " line numbering.
 syntax on " syntax highlighting.
-set tabstop=4       " Display a \t as 4 columns wide.
-set softtabstop=4   " Backspace goes back 4 columns of whitespace.
-set shiftwidth=4    " Indents will have a width of 4.
-set expandtab       " Expand TABs to spaces.
-set autoindent      " New line starts from previous indentation.
 set path=$PWD/**
 set background=dark
 colorscheme ron
 inoremap jk <Esc>
 set viminfo='100,<1000,s1000,h " Increase max size of registers
 
+" Spacing
+set tabstop=2       " Display a \t as 4 columns wide.
+set softtabstop=2   " Backspace goes back 4 columns of whitespace.
+set shiftwidth=2    " Indents will have a width of 4.
+set expandtab       " Expand TABs to spaces.
+set autoindent      " New line starts from previous indentation.
+autocmd Filetype python setlocal ts=4 sw=4 sts=4
+
+" Key mappings
 autocmd FileType markdown imap <buffer> <F4> <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 autocmd FileType markdown nmap <buffer> <F4> i<F4><Esc>
 autocmd FileType markdown imap <buffer> <F5> # <F4><CR># <Esc>
