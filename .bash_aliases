@@ -44,6 +44,15 @@ delete_pricing_directories() {
     ls ~/insurance | grep -P "_temporary_pricing_folder" | xargs -d '\n' rm -r
 }
 
+# Log memory consumption over time in a machine readable format to 'memory_log.txt'
+memory_log() {
+  echo "      date     time $(free -m | grep total | sed -E 's/^    (.*)/\1/g')" >> memory_log.txt
+  while true; do
+      echo "$(date '+%Y-%m-%d %H:%M:%S') $(free -m | grep Mem: | sed 's/Mem://g')" >> memory_log.txt
+          sleep 1
+        done
+}
+
 # Use VIM mode.
 set -o vi
 # Use jk to enter normal mode at the command line. 
