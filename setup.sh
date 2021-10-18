@@ -24,6 +24,5 @@ cd insurance
 
 # Open a split-pane tmux session.
 tmux new-session -d
-tmux split-window -h 'vim'
 tmux -2 attach-session -d
 
