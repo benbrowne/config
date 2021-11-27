@@ -1,8 +1,3 @@
-# Install vim 8.2 for COC compatibility
-add-apt-repository ppa:jonathonf/vim -y
-apt update
-apt install vim -y
-
 # Fuzzy finder
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --completion --key-bindings --update-rc
@@ -31,7 +26,6 @@ source .bash_aliases
 # Use insurance as the working directory.
 cd insurance
 
-# Open a split-pane tmux session.
-tmux new-session -d
-tmux -2 attach-session -d
+# Open a tmux session.
+tmux
 

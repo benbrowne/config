@@ -35,7 +35,7 @@ command Diff execute ":w !diff % -"
 call plug#begin()
 " autocompletion. Dependency: 'curl -sL install-node.now.sh/lts | bash'
 " Then: ':CocInstall coc-pyright'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " file system explorer
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Generate python docstrings. Dependency: 'pip install doq'
@@ -48,6 +48,7 @@ call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
 let g:pydocstring_templates_path = '.vim/custom_numpy_docstring_template/'
+let g:coc_disable_startup_warning = 1
 
 
 " ---------------------------------------
