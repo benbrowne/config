@@ -1,7 +1,6 @@
 set number " line numbering.
 syntax on " syntax highlighting.
 set path=$PWD/**
-set background=dark
 inoremap jk <Esc>
 set viminfo='100,<1000,s1000,h " Increase max size of registers
 
