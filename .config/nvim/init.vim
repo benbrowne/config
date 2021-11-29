@@ -45,6 +45,8 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'junegunn/fzf'
 " ag in vim
 Plug 'epmatsw/ag.vim'
+" formatting
+Plug 'tell-k/vim-autopep8'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"

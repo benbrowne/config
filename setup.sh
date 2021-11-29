@@ -22,6 +22,9 @@ apt install silversearcher-ag
 echo 'installing COC-pyright'
 vi +'CocInstall coc-pyright'
 
+# autoformatting
+pip install autopep8
+
 # python module doq is a dependency for vim-pydocstring
 pip install doq 
 
