@@ -22,6 +22,7 @@ autocmd FileType markdown nmap <buffer> <F5> i<F5>
 
 autocmd FileType python imap <buffer> <F4> import ipdb; ipdb.set_trace()<CR>
 autocmd FileType python nmap <buffer> <F4> i<F4>
+autocmd FileType python imap <buffer> """<CR> <up><C-O>:Pydocstring<CR>
 
 " Capitalize line starts and add periods to line ends.
 vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
@@ -47,8 +48,8 @@ Plug 'epmatsw/ag.vim'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
-let g:pydocstring_templates_path = '.vim/custom_numpy_docstring_template/'
 let g:coc_disable_startup_warning = 1
+let g:pydocstring_formatter = 'numpy'
 
 
 " ---------------------------------------
