@@ -49,9 +49,7 @@ Plug 'tell-k/vim-autopep8'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
-let g:coc_disable_startup_warning = 1
 let g:pydocstring_formatter = 'numpy'
-
 
 " ---------------------------------------
 "  COC settings
