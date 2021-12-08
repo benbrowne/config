@@ -19,8 +19,12 @@ echo 'installing rename'
 apt install rename
 echo 'installing ag'
 apt install silversearcher-ag
-echo 'installing COC-pyright'
+echo 'installing coc-pyright'
 vi +'CocInstall coc-pyright'
+echo 'installing coc-SQL'
+vi +'CocInstall coc-sql'
+echo 'installing coc-yaml'
+vi +'CocInstall coc-yaml'
 
 # autoformatting
 pip install autopep8
