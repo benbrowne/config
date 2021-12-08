@@ -45,11 +45,15 @@ Plug 'junegunn/fzf'
 Plug 'epmatsw/ag.vim'
 " formatting
 Plug 'tell-k/vim-autopep8'
+" zenburn colorscheme
+Plug 'vim-scripts/Zenburn'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
 let g:pydocstring_formatter = 'numpy'
 
+let g:zenburn_high_Contrast=1
+colors zenburn
 " ---------------------------------------
 "  COC settings
 " ---------------------------------------
