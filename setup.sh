@@ -1,5 +1,3 @@
-source .bash_aliases
-
 # Fuzzy finder
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --completion --key-bindings --update-rc
@@ -8,6 +6,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 add-apt-repository ppa:neovim-ppa/stable
 apt-get update
 apt install neovim
+
+# aliases maps vi to nvim so must come after neovim install.
+source .bash_aliases
 
 echo 'installing vimplug'
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
