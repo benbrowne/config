@@ -16,17 +16,17 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 echo 'installing Nodejs for COC-pyright'
 curl -sL install-node.now.sh/lts | bash -s -- -f
 echo 'installing vim plugins'
-vi +'PlugInstall' +'qa'
+nvim +'PlugInstall' +'qa'
 echo 'installing rename'
 apt install rename
 echo 'installing ag'
 apt install silversearcher-ag
 echo 'installing coc-pyright'
-vi +'CocInstall coc-pyright'
+nvim +'CocInstall coc-pyright' +'qa'
 echo 'installing coc-SQL'
-vi +'CocInstall coc-sql'
+nvim +'CocInstall coc-sql' +'qa'
 echo 'installing coc-yaml'
-vi +'CocInstall coc-yaml'
+nvim +'CocInstall coc-yaml' +'qa'
 
 # autoformatting
 pip install autopep8
@@ -36,7 +36,6 @@ pip install doq
 
 # Prefer to pdb for debugging.
 pip install ipdb
-
 
 # Use insurance as the working directory.
 cd insurance

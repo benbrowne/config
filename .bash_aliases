@@ -1,3 +1,4 @@
+echo 'sourcing .bash_aliases'
 alias ls="ls -G"
 alias gb="git rev-parse --abbrev-ref HEAD"
 alias gcb="git checkout -b"
