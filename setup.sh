@@ -5,7 +5,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # Neovim
 add-apt-repository ppa:neovim-ppa/stable
 apt-get update
-apt install neovim
+apt -y install neovim
 
 # aliases maps vi to nvim so must come after neovim install.
 source .bash_aliases
