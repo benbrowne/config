@@ -3,7 +3,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --completion --key-bindings --update-rc
 
 # Neovim
-add-apt-repository ppa:neovim-ppa/stable
+add-apt-repository -y ppa:neovim-ppa/stable
 apt-get update
 apt install -y neovim
 
