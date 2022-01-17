@@ -6,7 +6,7 @@ This repo stores all configurations that I want to be portable between systems. 
 
 # To setup this repo in your home directory:
 $ git init  
-$ git remote add origin https://github.com/benbrowne/config.git  
+$ git remote set-url origin git@github.com:benbrowne/config.git
 $ git fetch  
 $ git reset --hard origin/master  
 
