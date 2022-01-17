@@ -17,7 +17,7 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 echo 'installing Nodejs for COC-pyright'
 curl -sL install-node.now.sh/lts | bash -s -- -f
 echo 'installing vim plugins'
-nvim +'PlugInstall' +'CocInstall -sync coc-pyright coc-sql coc-yaml' +'qall'
+nvim +'PlugInstall' +'CocInstall -sync coc-pyright coc-sql coc-yaml' # CocInstalls don't work with +'qall'
 echo 'installing rename'
 apt install rename
 echo 'installing ag'
