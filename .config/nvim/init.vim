@@ -28,7 +28,17 @@ vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
 " View the unsaved changes
 command Diff execute ":w !diff % -"
 
-" vimplug. 
+" Function to trim all trailing whitespace.
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+" Map to a command to avoid typing 'call'
+command! TrimWhitespace call TrimWhitespace()
+
+" vimplug.
 " Installed with curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim.
 " Install packages with :PlugInstall
 call plug#begin()
