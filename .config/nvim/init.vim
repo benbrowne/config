@@ -57,6 +57,8 @@ Plug 'epmatsw/ag.vim'
 Plug 'tell-k/vim-autopep8'
 " zenburn colorscheme
 Plug 'vim-scripts/Zenburn'
+" color coding of csv columns
+Plug 'mechatroner/rainbow_csv'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
