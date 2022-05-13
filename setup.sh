@@ -26,6 +26,9 @@ apt install silversearcher-ag
 # autoformatting
 pip install autopep8
 
+# Linting
+pip install flake8
+
 # python module doq is a dependency for vim-pydocstring
 pip install doq 
 
