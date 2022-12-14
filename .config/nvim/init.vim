@@ -13,14 +13,14 @@ set autoindent      " New line starts from previous indentation.
 autocmd Filetype python setlocal ts=4 sw=4 sts=4
 
 " Key mappings
-autocmd FileType markdown imap <buffer> <F4> <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
-autocmd FileType markdown nmap <buffer> <F4> i<F4><Esc>
-autocmd FileType markdown imap <buffer> <F5> # <F4><CR># <Esc>
-autocmd FileType markdown nmap <buffer> <F5> i<F5>
+autocmd FileType markdown imap <buffer> <F1> <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
+autocmd FileType markdown nmap <buffer> <F1> i<F1><Esc>
+autocmd FileType markdown imap <buffer> <F2> # <F1><CR># <Esc>
+autocmd FileType markdown nmap <buffer> <F2> i<F2>
 
-autocmd FileType python imap <buffer> <F4> import ipdb; ipdb.set_trace()<CR>
-autocmd FileType python nmap <buffer> <F4> i<F4>
-autocmd FileType python imap <buffer> """<CR> <up><C-O>:Pydocstring<CR>
+autocmd FileType python imap <buffer> <F1> import ipdb; ipdb.set_trace()<CR>
+autocmd FileType python nmap <buffer> <F1> i<F1>
+autocmd FileType python nmap <buffer> <F2> :Pydocstring<CR>
 
 " Capitalize line starts and add periods to line ends.
 vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
