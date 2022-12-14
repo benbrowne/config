@@ -55,10 +55,14 @@ Plug 'junegunn/fzf'
 Plug 'epmatsw/ag.vim'
 " formatting
 Plug 'tell-k/vim-autopep8'
-" zenburn colorscheme
-Plug 'vim-scripts/Zenburn'
 " color coding of csv columns
 Plug 'mechatroner/rainbow_csv'
+" colorschemes
+Plug 'vim-scripts/Zenburn'
+Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
