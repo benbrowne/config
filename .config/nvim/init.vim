@@ -63,6 +63,8 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
 Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
+" Substitutions of all variants of words
+Plug 'tpope/vim-abolish'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
