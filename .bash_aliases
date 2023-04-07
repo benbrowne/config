@@ -57,4 +57,6 @@ memory_log() {
 # Use VIM mode.
 set -o vi
 # Use jk to enter normal mode at the command line. 
-bind '"jk":vi-movement-mode'
+bindkey -M viins 'jk' vi-cmd-mode
+# Enable reverse search.
+bindkey '^R' history-incremental-search-backward
