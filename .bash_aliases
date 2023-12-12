@@ -8,7 +8,7 @@ alias gap='git add -p'
 alias gsu='git submodule update'
 alias tsheets="git reflog --after '60 days ago' --format='%ad  %s' --date=format:%Y-%m-%d --author=ben | sort -r"
 alias vlog='vi +$ ~/Dropbox/log.md'
-alias ldate="TZ="US/Pacific" date '+%Y-%m-%d %H:%M:%S'"
+alias ldate="TZ="Europe/London" date '+%Y-%m-%d %H:%M:%S'"
 alias vi=nvim
 
 # Inline substitution within the current git repo.
