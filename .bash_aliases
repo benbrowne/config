@@ -56,6 +56,11 @@ memory_log() {
 
 # Use VIM mode.
 set -o vi
+
+# bash specific
+bind '"jk":vi-movement-mode'
+
+# zsh specific. 
 # Use jk to enter normal mode at the command line. 
 bindkey -M viins 'jk' vi-cmd-mode
 # Enable reverse search.
