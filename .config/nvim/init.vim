@@ -67,13 +67,13 @@ Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 " Substitutions of all variants of words
 Plug 'tpope/vim-abolish'
+" Preview markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
 let g:pydocstring_formatter = 'numpy'
 
-let g:zenburn_high_Contrast=1
-colors zenburn
 " ---------------------------------------
 "  COC settings
 " ---------------------------------------
