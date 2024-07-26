@@ -35,8 +35,3 @@ pip install doq
 # Prefer to pdb for debugging.
 pip install ipdb
 
-# Use insurance as the working directory.
-cd insurance
-
-# Open a tmux session.
-tmux -2
