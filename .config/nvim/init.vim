@@ -40,8 +40,6 @@ command! TrimWhitespace call TrimWhitespace()
 
 " vimplug.
 " Installed with curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim.
-let g:zenburn_high_Contrast=1
-colors zenburn
 " Install packages with :PlugInstall
 call plug#begin()
 " autocompletion. Dependency: 'curl -sL install-node.now.sh/lts | bash'
