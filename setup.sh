@@ -8,7 +8,7 @@ echo 'installing Neovim'
 apt update
 add-apt-repository -y ppa:neovim-ppa/stable
 apt update
-apt install -y neovim
+apt install -y neovim=0.9.5
 
 # aliases maps vi to nvim so must come after neovim install
 sudo -u ben source ~/.bash_aliases
