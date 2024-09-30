@@ -35,6 +35,5 @@ apt install -y silversearcher-ag
 
 # Python tools
 echo 'installing Python packages'
-# python module doq is a dependency for vim-pydocstring
 pip install autopep8 flake8 doq ipdb
 

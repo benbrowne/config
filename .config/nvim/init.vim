@@ -3,6 +3,7 @@ syntax on " syntax highlighting.
 set path=$PWD/**
 inoremap jk <Esc>
 set viminfo='100,<1000,s1000,h " Increase max size of registers
+set clipboard=unnamedplus " yank to system clipboard
 
 " Spacing
 set tabstop=2       " Display a \t as 4 columns wide.
