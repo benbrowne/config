@@ -7,9 +7,10 @@ alias grh="git reset --hard"
 alias gcm='git commit -m'
 alias gap='git add -p'
 alias gsu='git submodule update'
-alias vlog='vi +$ ~/Dropbox/log.md'
 alias ldate="TZ="US/Pacific" date '+%Y-%m-%d %H:%M:%S'"
 alias vi=nvim
+alias log='vi ~/Dropbox/log.md'
+alias todo='vi ~/Dropbox/todo.md'
 
 # Inline substitution within the current git repo.
 gitsed() {
@@ -43,6 +44,39 @@ memory_log() {
       echo "$(date '+%Y-%m-%d %H:%M:%S') $(free -m | grep Mem: | sed 's/Mem://g')" >> memory_log.txt
           sleep 1
         done
+}
+
+# Quickly view a markdown file.
+view() {
+  # Check if a markdown file is provided
+  if [ -z "$1" ]; then
+    echo "Usage: convert_and_open_md <markdown_file>"
+    return 1
+  fi
+  
+  # Get the markdown file and generate the HTML file name
+  md_file="$1"
+  html_file="${md_file%.md}.html"
+  
+  # Convert the markdown file to HTML using pandoc
+  pandoc "$md_file" -o "$html_file"
+  
+  # Check if the conversion was successful
+  if [ ! -f "$html_file" ]; then
+    echo "Error: Failed to generate HTML file."
+    return 1
+  fi
+
+  # Open the HTML file using xdg-open
+  xdg-open "$html_file"
+  
+  # Wait for a moment to allow the browser to open the file
+  sleep 2
+  
+  # Remove the generated HTML file
+  rm "$html_file"
+  
+  echo "HTML file opened and removed: $html_file"
 }
 
 # Use VIM mode.
