@@ -68,6 +68,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-abolish'
 " Preview markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+" AI autocompletion
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
