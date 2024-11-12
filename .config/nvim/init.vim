@@ -5,6 +5,8 @@ inoremap jk <Esc>
 set viminfo='100,<1000,s1000,h " Increase max size of registers
 set clipboard=unnamedplus " yank to system clipboard
 set undofile " persistent undo
+set wildignore+=*/.git/*,*/venv/* " Ignore git and virtualenv directories in vimgrep, find, etc
+
 
 " Spacing
 set tabstop=2       " Display a \t as 4 columns wide.
