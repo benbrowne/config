@@ -5,10 +5,10 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # Neovim
 echo 'installing Neovim'
-dnf update
+apt update
 add-dnf-repository -y ppa:neovim-ppa/stable
-dnf update
-dnf install -y neovim
+apt update
+apt install -y neovim
 
 # aliases maps vi to nvim so must come after neovim install
 sudo -u ben source ~/.bash_aliases
@@ -28,12 +28,12 @@ sudo -u ben nvim +'PlugInstall' +'CocInstall -sync coc-pyright coc-sql coc-yaml'
 
 # System packages (rename and ag)
 echo 'installing rename'
-dnf install -y rename
+apt install -y rename
 
 echo 'installing ag'
-dnf install -y silversearcher-ag
+apt install -y silversearcher-ag
 
-dnf install pip
+apt install pip
 
 # Python tools
 echo 'installing Python packages'
