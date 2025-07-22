@@ -6,6 +6,9 @@ set viminfo='100,<1000,s1000,h " Increase max size of registers
 set clipboard=unnamedplus " yank to system clipboard
 set undofile " persistent undo
 set wildignore+=*/.git/*,*/venv/* " Ignore git and virtualenv directories in vimgrep, find, etc
+colorscheme elflord
+map gf :e <cfile><CR>
+
 
 
 " Spacing
@@ -19,8 +22,9 @@ autocmd Filetype python setlocal ts=4 sw=4 sts=4
 " Key mappings
 autocmd FileType markdown imap <buffer> <F1> <C-R>=strftime('%Y-%m-%d %H:%M')<CR>
 autocmd FileType markdown nmap <buffer> <F1> i<F1><Esc>
-autocmd FileType markdown imap <buffer> <F2> # <F1><CR># <Esc>
+autocmd FileType markdown imap <buffer> <F2> # <F1> <Bar> 
 autocmd FileType markdown nmap <buffer> <F2> i<F2>
+
 
 autocmd FileType python imap <buffer> <F1> import ipdb; ipdb.set_trace()<CR>
 autocmd FileType python nmap <buffer> <F1> i<F1>

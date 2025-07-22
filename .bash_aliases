@@ -9,8 +9,10 @@ alias gap='git add -p'
 alias gsu='git submodule update'
 alias ldate="TZ="US/Pacific" date '+%Y-%m-%d %H:%M:%S'"
 alias vi=nvim
-alias log='vi ~/Dropbox/log.md'
-alias todo='vi ~/Dropbox/todo.md'
+alias log='cd ~/Wiki && vi -O log.md todo.md'
+alias wiki='vi ~Wike/home.md'
+alias vpn='sudo gpclient --ignore-tls-errors connect remote.abovesurveying.com'
+alias pandoc='pandoc -s'
 
 # Inline substitution within the current git repo.
 gitsed() {
