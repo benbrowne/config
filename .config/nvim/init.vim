@@ -8,6 +8,7 @@ set undofile " persistent undo
 set wildignore+=*/.git/*,*/venv/* " Ignore git and virtualenv directories in vimgrep, find, etc
 colorscheme elflord
 map gf :e <cfile><CR>
+set spelllang=en_gb
 
 
 
@@ -29,6 +30,8 @@ autocmd FileType markdown nmap <buffer> <F2> i<F2>
 autocmd FileType python imap <buffer> <F1> import ipdb; ipdb.set_trace()<CR>
 autocmd FileType python nmap <buffer> <F1> i<F1>
 autocmd FileType python nmap <buffer> <F2> :Pydocstring<CR>
+
+nnoremap <F3> :set spell!<CR>
 
 " Capitalize line starts and add periods to line ends.
 vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
