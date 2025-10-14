@@ -15,8 +15,7 @@ sudo -u ben source ~/.bash_aliases
 
 # Vim Plug installation
 echo 'installing vim-plug'
-sudo -u ben sh -c 'curl -fLo "$HOME/.local/share/nvim/site/autoload/plug.vim" --create-dirs \
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install Node.js
 echo 'installing Node.js for COC-pyright'
