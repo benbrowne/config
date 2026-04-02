@@ -29,8 +29,8 @@ sudo -u ben nvim +'PlugInstall' +'CocInstall -sync coc-pyright coc-sql coc-yaml'
 echo 'installing rename'
 apt install -y rename
 
-echo 'installing ag'
-apt install -y silversearcher-ag
+echo 'installing ripgrep'
+apt install -y ripgrep
 
 apt install pip
 

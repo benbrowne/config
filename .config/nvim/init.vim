@@ -11,7 +11,6 @@ map gf :e <cfile><CR>
 set spelllang=en_gb
 
 
-
 " Spacing
 set tabstop=2       " Display a \t as 4 columns wide.
 set softtabstop=2   " Backspace goes back 4 columns of whitespace.
@@ -31,6 +30,11 @@ autocmd FileType python imap <buffer> <F1> import ipdb; ipdb.set_trace()<CR>
 autocmd FileType python nmap <buffer> <F1> i<F1>
 autocmd FileType python nmap <buffer> <F2> :Pydocstring<CR>
 
+" Use ripgrep for :grep
+set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+set grepformat=%f:%l:%c:%m
+
+" Spellcheck shortcut
 nnoremap <F3> :set spell!<CR>
 
 " Capitalize line starts and add periods to line ends.
