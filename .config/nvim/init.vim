@@ -84,10 +84,14 @@ Plug 'tpope/vim-abolish'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 " AI autocompletion
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+" Markdown tables
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
 let g:pydocstring_formatter = 'numpy'
+let g:table_mode_corner='|'
+autocmd FileType markdown silent TableModeEnable
 
 " ---------------------------------------
 "  COC settings
@@ -110,16 +114,9 @@ set updatetime=300
 " diagnostics appear/become resolved
 set signcolumn=yes
 
-" Use tab for trigger completion with characters ahead and navigate
-" NOTE: There's always complete item selected by default, you may want to enable
-" no select by `"suggest.noselect": true` in your configuration file
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" Use C-n/C-p to navigate COC completion popup; tab is left free for codeium
+inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : coc#refresh()
+inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
