@@ -37,6 +37,9 @@ set grepformat=%f:%l:%c:%m
 " Spellcheck shortcut
 nnoremap <F3> :set spell!<CR>
 
+" Move a line to done.md
+autocmd FileType markdown nnoremap <buffer> <F4> dd:e done.md<CR>:0put<CR><C-o>
+
 " Capitalize line starts and add periods to line ends.
 vnoremap <F6> :s/\v^(\W*)(\w)/\1\u\2/e<CR> :'<,'>s/\v(\w)\s*$/\1./e<CR>
 
