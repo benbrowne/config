@@ -13,6 +13,8 @@ alias log='cd ~/Documents/wiki && vi -O log.md todo.md'
 alias wiki='vi ~Wike/home.md'
 alias vpn='sudo gpclient --ignore-tls-errors connect remote.abovesurveying.com'
 alias pandoc='pandoc -s --defaults defaults'
+alias start-call="~/Code/meeting_recorder/start-call.sh"
+alias stop-call="~/Code/meeting_recorder/stop-call.sh"
 
 # Inline substitution within the current git repo.
 gitsed() {
