@@ -12,7 +12,7 @@ alias vi=nvim
 alias log='cd ~/Documents/wiki && vi -O log.md todo.md'
 alias wiki='vi ~Wike/home.md'
 alias vpn='sudo gpclient --ignore-tls-errors connect remote.abovesurveying.com'
-alias pandoc='pandoc -s'
+alias pandoc='pandoc -s --defaults defaults'
 
 # Inline substitution within the current git repo.
 gitsed() {
@@ -38,6 +38,13 @@ delete_branches() {
     done
 }
 
+
+# Convert files matching a glob to markdown using pandoc.
+to_markdown() {
+  for f in "$@"; do
+    [ -f "$f" ] && pandoc "$f" -t markdown -o "${f%.*}.md"
+  done
+}
 
 # Log memory consumption over time in a machine readable format to 'memory_log.txt'
 memory_log() {
