@@ -94,7 +94,7 @@ call plug#end()
 let g:pydocstring_doq_path = "/usr/local/bin/doq"
 let g:pydocstring_formatter = 'numpy'
 let g:table_mode_corner='|'
-autocmd FileType markdown silent TableModeEnable
+autocmd FileType markdown silent! TableModeEnable
 
 " ---------------------------------------
 "  COC settings
@@ -108,6 +108,7 @@ set encoding=utf-8
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
+
 
 " Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
 " delays and poor user experience
