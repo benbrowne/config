@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep *)",
+      "Bash(awk *)"
+    ]
+  },
+  "model": "opus[1m]",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "editorMode": "vim",
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true,
+  "statusLine": {
+    "type": "command",
+    "command": "bash /home/ben/.claude/statusline-command.sh"
+  }
+}
